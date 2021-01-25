@@ -16,7 +16,7 @@ class Zielony : public Ogorek
 public:
     std::string chrup() override 
     { 
-        return Ogorek.chrupZielony();
+        return chrupZielony();
     }
 };
 
@@ -25,20 +25,20 @@ class Kiszony : public Ogorek
 public:
     std::string chrup() override
     {
-        return Ogorek.chrupKiszony(); 
+        return chrupKiszony(); 
     }
 };
 
-std::string jedzOgorek(Ogorek*)
+std::string jedzOgorek(Ogorek *O)
 {
     std::string tekst; 
-    if (Ogorek* == Zielony) //
+    if (O == Zielony)
     {
         tekst = "Zielony: "; 
         return  tekst + chrupZielony();
     }
 
-    if (Ogorek* == Kiszony)
+    if (O == Kiszony)
     {
         tekst = "Kiszony: ";
         return tekst + chrupKiszony();
