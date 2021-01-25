@@ -31,14 +31,15 @@ public:
 
 std::string jedzOgorek(Ogorek *O)
 {
+
     std::string tekst; 
-    if (O == Zielony)
+    if (typeid(*O) == typeid(Zielony))
     {
         tekst = "Zielony: "; 
         return  tekst + chrupZielony();
     }
 
-    if (O == Kiszony)
+    if (typeid(*O) == typeid(Kiszony))
     {
         tekst = "Kiszony: ";
         return tekst + chrupKiszony();
